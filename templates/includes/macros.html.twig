@@ -1,0 +1,12 @@
+{% macro taxo_l_block(t, counters, license) %}
+    <tr class="hover">
+        <td {% if not license %} style="display:none"{% endif %} class="selector"><input type="checkbox" checked name="chosen[]" value="{{ t }}"></td>
+        <td><label>
+                <input type="radio" name="tag" value="{{ t }}">  {{ t }} (<span class="qty">{{ counters[t] }}</span>)
+            </label>
+        </td>
+        <td class="selector" {% if not license %} style="display:none"{% endif %}>
+            <div class="ignore" data-term="{{ t }}" title="{{ _t.ignore }}"><i class="dashicons dashicons-dismiss"></i></div>
+        </td>
+    </tr>
+{% endmacro %}

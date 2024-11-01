@@ -1,0 +1,9 @@
+<div class="wp-filter">
+	<ul class="filter-links">
+		<li><a href="?page=taxoclean_l" {% if section == "l" %}class="current"{% endif %}>{{ _t.lookalikes }}</a> </li>
+		<li><a href="?page=taxoclean_o" {% if section == "o" %}class="current"{% endif %}>{{ _t.orphans }}</a> </li>
+		<li><a href="?page=taxoclean_s" {% if section == "s" %}class="current"{% endif %}>{{ _t.settings }}</a> </li>
+		<li {% if not license %} style="display:none"{% endif %}><a href="?page=taxoclean_l_ignores" {% if section == "i" %}class="current"{% endif %}>{{ _t.ignores }}</a> </li>
+		<li><a href="?page=taxoclean_a" {% if section == "a" %}class="current"{% endif %}>{{ _t.about }}</a> </li>
+	</ul>
+</div>

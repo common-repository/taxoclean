@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    {% if ignored|length == 0 %}
+        {{ _t.no_ignored }}
+    {%  endif %}
+
+    {% for i in ignored %}
+        <div class="box">
+            {{ i.term }}
+            <a onclick="return confirm('{{ _t.are_you_sure }}')" href="?page=taxoclean_l_ignores&delete={{ i.id }}">{{ _t.unignore }}</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}

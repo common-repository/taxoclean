@@ -1,0 +1,284 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Taxoclean\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-12 07:04+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.1\n"
+"X-Domain: taxoclean"
+
+#: includes/translations.php:41
+msgid "About"
+msgstr ""
+
+#: includes/translations.php:10
+msgid "Analyze of"
+msgstr ""
+
+#: includes/translations.php:16
+msgid "Apply"
+msgstr ""
+
+#: includes/translations.php:29
+msgid "Are you sure ?"
+msgstr ""
+
+#: includes/translations.php:28
+msgid ""
+"Are you sure ? Posts will not be deleted, only the taxonomy term will be "
+"removed."
+msgstr ""
+
+#: includes/translations.php:30
+msgid ""
+"Are you sure ? This term will be ignored and will not be displayed in the "
+"lookalikes list."
+msgstr ""
+
+#. Author of the plugin
+msgid "Artwhere"
+msgstr ""
+
+#: includes/translations.php:22
+msgid "Batch size"
+msgstr ""
+
+#: includes/translations.php:27
+msgid "Choose"
+msgstr ""
+
+#: includes/translations.php:53
+msgid "Current taxonomy to analyze"
+msgstr ""
+
+#: includes/translations.php:26
+msgid "Delete"
+msgstr ""
+
+#: includes/translations.php:18
+msgid "Delete selected"
+msgstr ""
+
+#: includes/translations.php:55
+msgid "Enable fast mode in the settings screen to skip this step"
+msgstr ""
+
+#: includes/translations.php:44
+msgid "Enter your license key"
+msgstr ""
+
+#: includes/translations.php:46
+msgid "Error: license key is not valid or already used on another domain"
+msgstr ""
+
+#: includes/translations.php:51
+msgid "Fast mode"
+msgstr ""
+
+#: includes/translations.php:52
+msgid ""
+"Fast mode will skip the check of the affected posts in the lookalikes mode."
+msgstr ""
+
+#: includes/translations.php:45
+msgid "Get your license key"
+msgstr ""
+
+#. Description of the plugin
+msgid "Helps you to cleanup your taxonomies"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.artwhere.eu"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://www.taxoclean.com"
+msgstr ""
+
+#: includes/translations.php:56
+msgid "Ignore"
+msgstr ""
+
+#: includes/translations.php:34
+msgid "Ignore list"
+msgstr ""
+
+#: includes/translations.php:36
+msgid "Ignored terms"
+msgstr ""
+
+#: includes/translations.php:50
+msgid ""
+"Ignored terms are terms that you don't want to see in the lookalikes and "
+"orphans list."
+msgstr ""
+
+#: includes/translations.php:17
+msgid "Invert selection"
+msgstr ""
+
+#: includes/translations.php:33
+msgid ""
+"Level of similarity between terms to consider them as lookalikes, increase "
+"to be more strict."
+msgstr ""
+
+#: includes/translations.php:43
+msgid "License"
+msgstr ""
+
+#: includes/translations.php:12
+msgid "Lookalike groups"
+msgstr ""
+
+#: includes/translations.php:32
+msgid "Lookalike level"
+msgstr ""
+
+#: includes/translations.php:48
+msgid ""
+"Lookalike terms are terms that are very similar to each other.<br>They are "
+"often the result of a typo, or a mistake. You can merge them to keep only "
+"one term."
+msgstr ""
+
+#: includes/translations.php:6
+msgid "Lookalikes"
+msgstr ""
+
+#: includes/translations.php:15
+msgid "Merge"
+msgstr ""
+
+#: includes/translations.php:13
+msgid "Merge those"
+msgstr ""
+
+#: includes/translations.php:37
+msgid "No ignored terms"
+msgstr ""
+
+#: includes/translations.php:31
+msgid "No matching tag"
+msgstr ""
+
+#: includes/translations.php:47
+msgid "Number of cleaned terms"
+msgstr ""
+
+#: includes/translations.php:23
+msgid "Number of terms to process in one batch."
+msgstr ""
+
+#: includes/translations.php:39
+msgid "orphan terms"
+msgstr ""
+
+#: includes/translations.php:49
+msgid ""
+"Orphan terms are terms that are not used in any post. You can delete them or "
+"reassign posts to another term."
+msgstr ""
+
+#: includes/translations.php:20
+msgid "Orphan treshold"
+msgstr ""
+
+#: includes/translations.php:7
+msgid "Orphans"
+msgstr ""
+
+#: includes/translations.php:40
+msgid "posts will be updated"
+msgstr ""
+
+#: includes/translations.php:59
+msgid ""
+"Premium version of Taxoclean will allow you to:\n"
+"\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t<li>· Select which terms you want to merge in lookalike mode."
+"</li>\n"
+"\t\t\t\t\t\t<li>· Bulk actions in orphans mode to delete many tags in one "
+"action.</li>\n"
+"\t\t\t\t\t\t<li>· Ignore some terms.</li>\t\t\t\t\t\t\n"
+"\t\t\t\t\t</ul>"
+msgstr ""
+
+#: includes/translations.php:25
+msgid "Replace"
+msgstr ""
+
+#: includes/translations.php:19
+msgid "Search another term"
+msgstr ""
+
+#: includes/translations.php:65
+msgid "Select all 0 posts terms"
+msgstr ""
+
+#: includes/translations.php:8
+msgid "Settings"
+msgstr ""
+
+#. Name of the plugin
+msgid "Taxoclean"
+msgstr ""
+
+#: includes/translations.php:42
+msgid ""
+"Taxoclean is a plugin to help you clean your taxonomies.<br>It will help you "
+"find lookalike terms, and merge them.<br>It will also help you find orphan "
+"terms, and delete them."
+msgstr ""
+
+#: includes/translations.php:57
+msgid ""
+"Taxoclean is powered by <a href='https://www.artwhere.eu' target='_blank'>"
+"Artwhere</a>"
+msgstr ""
+
+#: includes/translations.php:24
+msgid "Taxonomy to analyze"
+msgstr ""
+
+#: includes/translations.php:11
+msgid "terms"
+msgstr ""
+
+#: includes/translations.php:14
+msgid "terms into"
+msgstr ""
+
+#: includes/translations.php:21
+msgid "Terms with less than this number of posts will be considered orphans."
+msgstr ""
+
+#: includes/translations.php:9
+msgid "Total terms"
+msgstr ""
+
+#: includes/translations.php:35
+msgid "Unignore"
+msgstr ""
+
+#: includes/translations.php:38
+msgid "Unselect all"
+msgstr ""
+
+#: includes/translations.php:54
+msgid "Updating"
+msgstr ""
+
+#: includes/translations.php:58
+msgid "Why premium ?"
+msgstr ""

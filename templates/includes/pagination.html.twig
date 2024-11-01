@@ -1,0 +1,32 @@
+{% set dots_mode = false %}
+{% set pagination_length = 4 %}
+
+{% for x in range(0, pages) %}
+    {% set display = false %}
+
+    {% if (page - x)|abs <= pagination_length %}
+        {% set display = true %}
+    {% endif %}
+
+    {% if x == (pages / 2)|round %}
+        {% set display = true %}
+    {% endif %}
+
+    {% if x <= pagination_length %}
+        {% set display = true %}
+    {% endif %}
+
+    {% if (pages - x)|abs <= pagination_length %}
+        {% set display = true %}
+    {% endif %}
+
+    {% if display %}
+        <a class="page {% if page == x %}active{% endif %}" href="?page={{ route }}&taxopage={{ x }}">{{ x + 1 }}</a>
+        {% set dots_mode = true %}
+    {% else %}
+        {% if dots_mode %}
+            <span class="page">...</span>
+            {% set dots_mode = false %}
+        {% endif %}
+    {% endif %}
+{% endfor %}

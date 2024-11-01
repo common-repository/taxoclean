@@ -1,0 +1,373 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Taxoclean\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-01 08:57+0000\n"
+"PO-Revision-Date: 2023-06-12 07:06+0000\n"
+"Last-Translator: admin\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Domain: taxoclean"
+
+#: includes/translations.php:41
+#, fuzzy
+msgid "About"
+msgstr "Acerca de"
+
+#: includes/translations.php:10
+#, fuzzy
+msgid "Analyze of"
+msgstr "Analizar de"
+
+#: includes/translations.php:16
+#, fuzzy
+msgid "Apply"
+msgstr "Aplicar"
+
+#: includes/translations.php:29
+#, fuzzy
+msgid "Are you sure ?"
+msgstr "Está seguro ?"
+
+#: includes/translations.php:28
+#, fuzzy
+msgid ""
+"Are you sure ? Posts will not be deleted, only the taxonomy term will be "
+"removed."
+msgstr ""
+"Está seguro ? Las publicaciones no se eliminarán, solo se eliminará el "
+"término de taxonomía."
+
+#: includes/translations.php:30
+#, fuzzy
+msgid ""
+"Are you sure ? This term will be ignored and will not be displayed in the "
+"lookalikes list."
+msgstr ""
+"Está seguro ? Este término se ignorará y no se mostrará en la lista de "
+"similares."
+
+#. Author of the plugin
+#, fuzzy
+msgid "Artwhere"
+msgstr "Artwhere"
+
+#: includes/translations.php:22
+#, fuzzy
+msgid "Batch size"
+msgstr "Tamaño del lote"
+
+#: includes/translations.php:27
+#, fuzzy
+msgid "Choose"
+msgstr "Elegir"
+
+#: includes/translations.php:53
+#, fuzzy
+msgid "Current taxonomy to analyze"
+msgstr "Taxonomía actual a analizar"
+
+#: includes/translations.php:26
+#, fuzzy
+msgid "Delete"
+msgstr "Borrar"
+
+#: includes/translations.php:18
+#, fuzzy
+msgid "Delete selected"
+msgstr "Eliminar seleccionado"
+
+#: includes/translations.php:55
+#, fuzzy
+msgid "Enable fast mode in the settings screen to skip this step"
+msgstr ""
+"Habilite el modo rápido en la pantalla de configuración para omitir este paso"
+
+#: includes/translations.php:44
+#, fuzzy
+msgid "Enter your license key"
+msgstr "Introduce tu clave de licencia"
+
+#: includes/translations.php:46
+#, fuzzy
+msgid "Error: license key is not valid or already used on another domain"
+msgstr "Error: la clave de licencia no es válida o ya se usa en otro dominio"
+
+#: includes/translations.php:51
+#, fuzzy
+msgid "Fast mode"
+msgstr "Modo rápido"
+
+#: includes/translations.php:52
+#, fuzzy
+msgid ""
+"Fast mode will skip the check of the affected posts in the lookalikes mode."
+msgstr ""
+"El modo rápido omitirá la verificación de las publicaciones afectadas en el "
+"modo similar."
+
+#: includes/translations.php:45
+#, fuzzy
+msgid "Get your license key"
+msgstr "Obtenga su clave de licencia"
+
+#. Description of the plugin
+#, fuzzy
+msgid "Helps you to cleanup your taxonomies"
+msgstr "Te ayuda a limpiar tus taxonomías."
+
+#. Author URI of the plugin
+#, fuzzy
+msgid "https://www.artwhere.eu"
+msgstr "https://www.artwhere.eu"
+
+#. URI of the plugin
+#, fuzzy
+msgid "https://www.taxoclean.com"
+msgstr "https://www.taxoclean.com"
+
+#: includes/translations.php:56
+#, fuzzy
+msgid "Ignore"
+msgstr "Ignorar"
+
+#: includes/translations.php:34
+#, fuzzy
+msgid "Ignore list"
+msgstr "Lista de ignorados"
+
+#: includes/translations.php:36
+#, fuzzy
+msgid "Ignored terms"
+msgstr "Términos ignorados"
+
+#: includes/translations.php:50
+#, fuzzy
+msgid ""
+"Ignored terms are terms that you don't want to see in the lookalikes and "
+"orphans list."
+msgstr ""
+"Los términos ignorados son términos que no desea ver en la lista de "
+"similares y huérfanos."
+
+#: includes/translations.php:17
+#, fuzzy
+msgid "Invert selection"
+msgstr "Invertir selección"
+
+#: includes/translations.php:33
+#, fuzzy
+msgid ""
+"Level of similarity between terms to consider them as lookalikes, increase "
+"to be more strict."
+msgstr ""
+"Nivel de similitud entre términos para considerarlos parecidos, aumentar "
+"para ser más estrictos."
+
+#: includes/translations.php:43
+#, fuzzy
+msgid "License"
+msgstr "Licencia"
+
+#: includes/translations.php:12
+#, fuzzy
+msgid "Lookalike groups"
+msgstr "Grupos similares"
+
+#: includes/translations.php:32
+#, fuzzy
+msgid "Lookalike level"
+msgstr "nivel de semejanza"
+
+#: includes/translations.php:48
+#, fuzzy
+msgid ""
+"Lookalike terms are terms that are very similar to each other.<br>They are "
+"often the result of a typo, or a mistake. You can merge them to keep only "
+"one term."
+msgstr ""
+"Los términos similares son términos que son muy similares entre sí.<br>A "
+"menudo son el resultado de un error tipográfico o un error. Puede "
+"fusionarlos para mantener solo un término."
+
+#: includes/translations.php:6
+#, fuzzy
+msgid "Lookalikes"
+msgstr "Parecidos"
+
+#: includes/translations.php:15
+#, fuzzy
+msgid "Merge"
+msgstr "Unir"
+
+#: includes/translations.php:13
+#, fuzzy
+msgid "Merge those"
+msgstr "Combinar esos"
+
+#: includes/translations.php:37
+#, fuzzy
+msgid "No ignored terms"
+msgstr "No hay términos ignorados"
+
+#: includes/translations.php:31
+#, fuzzy
+msgid "No matching tag"
+msgstr "Sin etiqueta coincidente"
+
+#: includes/translations.php:47
+#, fuzzy
+msgid "Number of cleaned terms"
+msgstr "Número de términos limpiados"
+
+#: includes/translations.php:23
+#, fuzzy
+msgid "Number of terms to process in one batch."
+msgstr "Número de términos a procesar en un lote."
+
+#: includes/translations.php:39
+#, fuzzy
+msgid "orphan terms"
+msgstr "términos huérfanos"
+
+#: includes/translations.php:49
+#, fuzzy
+msgid ""
+"Orphan terms are terms that are not used in any post. You can delete them or "
+"reassign posts to another term."
+msgstr ""
+"Los términos huérfanos son términos que no se utilizan en ninguna "
+"publicación. Puede eliminarlos o reasignar publicaciones a otro término."
+
+#: includes/translations.php:20
+#, fuzzy
+msgid "Orphan treshold"
+msgstr "Umbral huérfano"
+
+#: includes/translations.php:7
+#, fuzzy
+msgid "Orphans"
+msgstr "huérfanos"
+
+#: includes/translations.php:40
+#, fuzzy
+msgid "posts will be updated"
+msgstr "se actualizaran las publicaciones"
+
+#: includes/translations.php:59
+#, fuzzy
+msgid ""
+"Premium version of Taxoclean will allow you to:\n"
+"\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t<li>· Select which terms you want to merge in lookalike mode."
+"</li>\n"
+"\t\t\t\t\t\t<li>· Bulk actions in orphans mode to delete many tags in one "
+"action.</li>\n"
+"\t\t\t\t\t\t<li>· Ignore some terms.</li>\t\t\t\t\t\t\n"
+"\t\t\t\t\t</ul>"
+msgstr ""
+"La versión Premium de Taxoclean le permitirá:\n"
+"<ul>\n"
+"<li>· Seleccione los términos que desea fusionar en modo similar.</li>\n"
+"<li>· Acciones masivas en modo huérfanos para eliminar muchas etiquetas en "
+"una sola acción.</li>\n"
+"<li>· Ignorar algunos términos.</li>\n"
+"</ul>"
+
+#: includes/translations.php:25
+#, fuzzy
+msgid "Replace"
+msgstr "Reemplazar"
+
+#: includes/translations.php:19
+#, fuzzy
+msgid "Search another term"
+msgstr "Buscar otro término"
+
+#: includes/translations.php:65
+#, fuzzy
+msgid "Select all 0 posts terms"
+msgstr "Seleccionar los 0 términos de las publicaciones"
+
+#: includes/translations.php:8
+#, fuzzy
+msgid "Settings"
+msgstr "Ajustes"
+
+#. Name of the plugin
+#, fuzzy
+msgid "Taxoclean"
+msgstr "Taxoclean"
+
+#: includes/translations.php:42
+#, fuzzy
+msgid ""
+"Taxoclean is a plugin to help you clean your taxonomies.<br>It will help you "
+"find lookalike terms, and merge them.<br>It will also help you find orphan "
+"terms, and delete them."
+msgstr ""
+"Taxoclean es un complemento que lo ayuda a limpiar sus taxonomías.<br>Lo "
+"ayudará a encontrar términos similares y fusionarlos.<br>También lo ayudará "
+"a encontrar términos huérfanos y eliminarlos."
+
+#: includes/translations.php:57
+#, fuzzy
+msgid ""
+"Taxoclean is powered by <a href='https://www.artwhere.eu' target='_blank'>"
+"Artwhere</a>"
+msgstr ""
+"Taxoclean funciona con <a href='https://www.artwhere.eu' target='_blank'>"
+"Artwhere</a>"
+
+#: includes/translations.php:24
+#, fuzzy
+msgid "Taxonomy to analyze"
+msgstr "Taxonomía a analizar"
+
+#: includes/translations.php:11
+#, fuzzy
+msgid "terms"
+msgstr "términos"
+
+#: includes/translations.php:14
+#, fuzzy
+msgid "terms into"
+msgstr "términos en"
+
+#: includes/translations.php:21
+#, fuzzy
+msgid "Terms with less than this number of posts will be considered orphans."
+msgstr ""
+"Los términos con menos de este número de publicaciones se considerarán "
+"huérfanos."
+
+#: includes/translations.php:9
+#, fuzzy
+msgid "Total terms"
+msgstr "Términos totales"
+
+#: includes/translations.php:35
+#, fuzzy
+msgid "Unignore"
+msgstr "Dejar de ignorar"
+
+#: includes/translations.php:38
+#, fuzzy
+msgid "Unselect all"
+msgstr "Deselecciona todo"
+
+#: includes/translations.php:54
+#, fuzzy
+msgid "Updating"
+msgstr "Actualizando"
+
+#: includes/translations.php:58
+#, fuzzy
+msgid "Why premium ?"
+msgstr "¿Por qué prima?"

@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+    <div class="box">
+        {{  _t.about_text|raw }}
+        <br>
+        <br>
+        <a href="https://www.artwhere.eu">https://www.artwhere.eu</a>
+        <br>
+        <br>
+        {{ _t.number_of_cleaned_terms }} : <b>{{ counter }}</b>
+    </div>
+    {% if not license %}
+    <div class="box">
+        <h1>{{ _t.why_premium }}</h1>
+        {{ _t.why_premium_text|raw }}
+        <a href="https://www.taxoclean.com" target="_blank" class="button button-primary">
+            <b>{{ _t.license_link }}</b>
+        </a>
+    </div>
+    {% endif %}
+    <div class="box">
+        <h1>{{ _t.lookalikes }}</h1>
+        {{ _t.lookalikes_text|raw }}
+        <h1>{{ _t.orphans }}</h1>
+        {{ _t.orphans_text|raw }}
+        <h1>{{ _t.ignores }}</h1>
+        {{ _t.ignores_text|raw }}
+    </div>
+
+{% endblock %}

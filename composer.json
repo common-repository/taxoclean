@@ -1,0 +1,11 @@
+{
+    "name": "artwhere/taxoclean",
+    "autoload": {
+        "psr-4": {
+            "Artwhere\\Taxoclean\\": "src/"
+        }
+    },
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}

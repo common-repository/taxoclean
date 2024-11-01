@@ -1,0 +1,215 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+		<div class="box">
+			<h1>{{ _t.total_terms }} <span id="tags_total">{{ all_tags|length }}</span></h1>
+			<h2><span id="orphans_total">{{ orphan_tags|length }}</span> {{ _t.orphan_terms }}</h2>
+		</div>
+
+		{% set pages = ((orphan_tags|length) / max)|round(0, "floor") %}
+
+		<div class="pager">
+			{% include "includes/pagination.html.twig" with {
+				"route": "taxoclean_o",
+				"pages": pages,
+				"page": page
+			} %}
+		</div>
+
+		<br>
+		<div class="taxoclean-container">
+			{% if license %}
+				<div>
+					<button class="button button-primary" id='select_0'><i class='dashicons dashicons-update'></i> {{ _t.select_0 }}</button>
+					<button class="button button-primary" id='invert'><i class='dashicons dashicons-update'></i> {{ _t.invert_selection }}</button>
+					<button class="button button-primary" id='unselect'><i class='dashicons dashicons-no'></i> {{ _t.all_unselect }}</button>
+					<button class="button button-primary" id="bulk_action"><i class='dashicons dashicons-trash'></i> {{ _t.delete_selected }}</button>
+				</div>
+				<div id="select_feedback"><span>0</span> {{ _t.selected }}</div>
+				<br>
+			{% endif %}
+			{% for k, tag in tags %}
+				<div class='box' id="tag_{{ tag.term_id }}">
+					<table width='100%'>
+						<tr class="tr_orphans">
+							{% if license %}
+								<td align='left' width='20'>
+									<input autocomplete="off" type='checkbox' value='{{ tag.term_id }}'>
+								</td>
+							{% endif %}
+							<td align='left'>
+								<input type='hidden' name='tag_id' value='{{ tag.term_id }}'>
+								<a target="_blank" href="{{ base_url }}/{{ tag.slug }}">{{ tag.name }}</a>
+								(<span class="counter">{{ tag.count }}</span>)
+							</td>
+							<td align='right' style='white-space:nowrap'>
+								<div class='replace_wrapper' {% if tag.count == 0 %}style="display:none"{% endif %}>
+									<span class="replacer"></span>
+									<button class='button replace' data-tagsource='{{ tag.term_id }}' data-tagtarget=''>{{ _t.replace }}</button>
+								</div>
+							</td>
+							<td align='right' width='100' style="white-space:nowrap">
+								<button class='button button-primary search' data-tag='{{ tag.name }}'><i class='dashicons dashicons-search'></i> {{ _t.search_another_term }}</button>
+								<button class='button button-primary delete' data-tag='{{ tag.term_id }}'><i class='dashicons dashicons-trash'></i> {{ _t.delete }}</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			{% endfor %}
+			<div style="clear:both"></div>
+		</div>
+		<br>
+		<div class="pager">
+			{% include "includes/pagination.html.twig" with {
+				"route": "taxoclean_o",
+				"pages": pages,
+				"page": page
+			} %}
+		</div>
+
+	<script>
+		jQuery(".taxoclean")
+		.on("click",".search", function(e) {
+			let $obj = jQuery(this);
+			$obj.addClass("blink");
+			e.preventDefault();
+			jQuery.ajax({
+				"type":"POST",
+				"dataType":"json",
+				"url": ajaxurl,
+				"data": {
+					_ajax_nonce: "{{ nonce }}",
+					"action": "taxoclean_search",
+					"tag": $obj.data("tag")
+				},
+				"success":function(msg) {
+					$obj.removeClass("blink");
+					let $box = $obj.parents(".box");
+					$box.find(".replace_wrapper").show();
+					$box.find(".replace").hide();
+					$box.find(".replacer").html("");
+					if (msg.length !== 0) {
+						$box.find(".replacer").html("<select><option value=''>" + _t.choose + "</option></select>");
+						for(let i in msg) {
+							$box.find(".replacer select").append("<option value='" + msg[i].id + "'>" + msg[i].tag + " [" + msg[i].counter + "]</option>");
+						}
+					} else {
+						$box.find(".replace_wrapper").text(_t.no_matching_tag);
+					}
+				}
+			});
+		})
+		.on("change","select", function() {
+			let $obj = jQuery(this);
+			let $box = $obj.parents(".box");
+			if ($obj.val() !== "") {
+				$box.find(".replace").show();
+				$box.find(".replace").data("tagtarget", $obj.val());
+			} else {
+				$box.find(".replace").hide();
+			}
+
+		})
+		.on("click",".replace", function() {
+			let $obj = jQuery(this);
+
+			if (confirm(_t.are_you_sure)) {
+				$obj.addClass("blink");
+				jQuery.ajax({
+					"type": "POST",
+					"dataType": "json",
+					"url": ajaxurl,
+					"data": {
+						"action": "taxoclean_replace",
+						"tagsource":$obj.data("tagsource"),
+						"tagtarget": $obj.data("tagtarget")
+					},
+					"success": function () {
+						jQuery("#tag_" + $obj.data("tagtarget")).remove();
+						$obj.parents(".box").remove();
+						jQuery("#tags_total").text(jQuery("#tags_total").text() - 1);
+						jQuery("#orphans_total").text(jQuery("#orphans_total").text() - 1);
+					}
+				});
+			}
+		})
+		.on("click",".delete", function() {
+			let $obj = jQuery(this);
+
+			if (confirm(_t.are_you_sure_delete)) {
+				$obj.addClass("blink");
+				jQuery.ajax({
+					"type": "POST",
+					"dataType": "json",
+					"url": ajaxurl,
+					"data": {
+						_ajax_nonce: "{{ nonce }}",
+						"action": "taxoclean_delete",
+						"id": jQuery(this).data("tag"),
+					},
+					"success": function () {
+						$obj.parents(".box").remove();
+						jQuery("#tags_total").text(jQuery("#tags_total").text() - 1);
+						jQuery("#orphans_total").text(jQuery("#orphans_total").text() - 1);
+					}
+				});
+			}
+			select_feedback();
+		})
+		.on("click",":checkbox", function() {
+			select_feedback();
+		})
+		.on("click","#select_0", function() {
+			jQuery(".taxoclean :checkbox").each(function() {
+				jQuery(this).prop("checked", false);
+				if (jQuery(this).parent().parent().find("span.counter").text() === "0") {
+					jQuery(this).prop("checked", true);
+				}
+			});
+			select_feedback();
+		})
+		.on("click","#invert", function() {
+			jQuery(".taxoclean :checkbox").each(function() {
+				jQuery(this).prop("checked", !jQuery(this).prop("checked"));
+			});
+			select_feedback();
+		})
+		.on("click","#unselect", function() {
+			jQuery(".taxoclean :checkbox").prop("checked", false);
+			select_feedback();
+		})
+		.on("click","#bulk_action", function() {
+			let vals = [];
+			jQuery(".taxoclean :checkbox:checked").each(function() {
+				vals.push(jQuery(this).val());
+				jQuery(this).parents(".box").addClass("blink");
+			});
+			if (confirm(_t.are_you_sure_delete)) {
+				jQuery.ajax({
+					"type": "POST",
+					"dataType": "json",
+					"url": ajaxurl,
+					"data": {
+						_ajax_nonce: "{{ nonce }}",
+						"action": "taxoclean_delete_bulk",
+						"ids": vals,
+					},
+					"success": function () {
+						jQuery(".blink").remove();
+						jQuery("#tags_total").text(jQuery("#tags_total").text() - vals.length);
+						jQuery("#orphans_total").text(jQuery("#orphans_total").text() - vals.length);
+					}
+				});
+			} else {
+				jQuery(".blink").removeClass("blink");
+			}
+			select_feedback();
+		});
+
+		function select_feedback() {
+			jQuery("#select_feedback SPAN").text(jQuery(".taxoclean :checkbox:checked").length);
+		}
+	</script>
+
+{% endblock %}

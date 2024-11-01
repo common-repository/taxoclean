@@ -1,0 +1,67 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+	<form method="POST" class="box">
+		<input type="hidden" name="tc_action" value="save">
+		<table class="form-table" autocomplete="off">
+			<tbody>
+				<tr>
+					<th scope="row"><label>{{ _t.taxonomy_to_analyze }}</label></th>
+					<td>
+						<select name="taxoclean_current_taxo">
+							{% for t in taxos %}
+								<option {% if t == current_taxo %}selected{% endif %} value="{{ t }}">{{ t }}</option>
+							{% endfor %}
+						</select>
+						<p class="description">{{ _t.current_taxo_desc }}</p>
+					</td>
+				</tr>
+
+				<tr>
+					<th scope="row"><label>{{ _t.batch_size }}</label></th>
+					<td><input name="taxoclean_max_per_page" type="number" value="{{ max_per_page }}">
+					<p class="description">{{ _t.batch_size_desc }}</p></td>
+				</tr>
+				<tr>
+					<th scope="row"><label>{{ _t.orphan_treshold }}</label></th>
+					<td><input name="taxoclean_orphan_level" type="number" value="{{ orphan_level }}">
+						<p class="description">{{ _t.orphan_treshold_desc }}</p></td>
+				</tr>
+				<tr>
+					<th scope="row"><label>{{ _t.lookalike_level }}</label></th>
+					<td><input name="taxoclean_lookalike_level" type="number" value="{{ lookalike_level }}">
+						<p class="description">{{ _t.lookalike_level_desc }}</p></td>
+				</tr>
+				<tr>
+					<th scope="row"><label>{{ _t.fast_mode }}</label></th>
+					<td><input {% if fast_mode %}checked{% endif %} name="taxoclean_fast_mode" type="checkbox" value="1">
+						<p class="description">{{ _t.fast_mode_desc }}</p></td>
+				</tr>
+				<tr>
+					<th scope="row"><label>{{ _t.license }}</label></th>
+					<td><input name="taxoclean_license" type="text" value="{{ license }}" style="width:80%{% if license %};background-color:#d1ead1{% endif %}">
+						{% if license %}
+							<i class="dashicons dashicons-saved" style="font-size:28px;color:green"></i>
+						{% endif %}
+						<div>
+							<p class="description">
+								{{ _t.license_desc }}
+								{% if not license %}
+									&nbsp;&nbsp;<a href="https://www.taxoclean.com" target="_blank" class="button button-primary"><b>{{ _t.license_link }}</b></a>
+								{% endif %}
+							</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<input type="submit" name="submit" id="submit" class="button button-primary" value="{{ _t.apply }}">
+					</th>
+					<td>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+{% endblock %}

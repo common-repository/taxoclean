@@ -1,0 +1,16 @@
+<h1>Taxoclean</h1>
+<link rel="stylesheet" href="{{ dir }}/assets/styles.css" />
+
+<div class="taxoclean">
+    <div class="left">
+        {% include "includes/tabs.html.twig" %}
+        {% block content %}
+
+        {% endblock %}
+    </div>
+    <img src="{{ dir }}/assets/robot.png" alt="robot" id="robot" />
+</div>
+
+<script>
+    var _t = {{ _t|json_encode|raw }}; // escaped by json_encode
+</script>

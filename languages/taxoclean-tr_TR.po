@@ -1,0 +1,369 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Taxoclean\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-01 08:57+0000\n"
+"PO-Revision-Date: 2023-06-12 07:06+0000\n"
+"Last-Translator: admin\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.2.2\n"
+"X-Domain: taxoclean"
+
+#: includes/translations.php:41
+#, fuzzy
+msgid "About"
+msgstr "Hakkında"
+
+#: includes/translations.php:10
+#, fuzzy
+msgid "Analyze of"
+msgstr "Analiz etmek"
+
+#: includes/translations.php:16
+#, fuzzy
+msgid "Apply"
+msgstr "Uygula"
+
+#: includes/translations.php:29
+#, fuzzy
+msgid "Are you sure ?"
+msgstr "Emin misin ?"
+
+#: includes/translations.php:28
+#, fuzzy
+msgid ""
+"Are you sure ? Posts will not be deleted, only the taxonomy term will be "
+"removed."
+msgstr ""
+"Emin misin ? Gönderiler silinmeyecek, sadece taksonomi terimi "
+"kaldırılacaktır."
+
+#: includes/translations.php:30
+#, fuzzy
+msgid ""
+"Are you sure ? This term will be ignored and will not be displayed in the "
+"lookalikes list."
+msgstr "Emin misin ? Bu terim yok sayılır ve benzerler listesinde gösterilmez."
+
+#. Author of the plugin
+#, fuzzy
+msgid "Artwhere"
+msgstr "Artwhere"
+
+#: includes/translations.php:22
+#, fuzzy
+msgid "Batch size"
+msgstr "Parti boyutu"
+
+#: includes/translations.php:27
+#, fuzzy
+msgid "Choose"
+msgstr "Seçmek"
+
+#: includes/translations.php:53
+#, fuzzy
+msgid "Current taxonomy to analyze"
+msgstr "Analiz edilecek güncel taksonomi"
+
+#: includes/translations.php:26
+#, fuzzy
+msgid "Delete"
+msgstr "Silmek"
+
+#: includes/translations.php:18
+#, fuzzy
+msgid "Delete selected"
+msgstr "Silme seçildi"
+
+#: includes/translations.php:55
+#, fuzzy
+msgid "Enable fast mode in the settings screen to skip this step"
+msgstr "Bu adımı atlamak için ayarlar ekranında hızlı modu etkinleştirin"
+
+#: includes/translations.php:44
+#, fuzzy
+msgid "Enter your license key"
+msgstr "Lisans kodunuzu girin"
+
+#: includes/translations.php:46
+#, fuzzy
+msgid "Error: license key is not valid or already used on another domain"
+msgstr ""
+"Hata: lisans anahtarı geçerli değil veya zaten başka bir alanda kullanılıyor"
+
+#: includes/translations.php:51
+#, fuzzy
+msgid "Fast mode"
+msgstr "Hızlı mod"
+
+#: includes/translations.php:52
+#, fuzzy
+msgid ""
+"Fast mode will skip the check of the affected posts in the lookalikes mode."
+msgstr ""
+"Hızlı mod, benzer moddaki etkilenen gönderilerin kontrolünü atlayacaktır."
+
+#: includes/translations.php:45
+#, fuzzy
+msgid "Get your license key"
+msgstr "Lisans anahtarınızı alın"
+
+#. Description of the plugin
+#, fuzzy
+msgid "Helps you to cleanup your taxonomies"
+msgstr "Taksonomilerinizi temizlemenize yardımcı olur"
+
+#. Author URI of the plugin
+#, fuzzy
+msgid "https://www.artwhere.eu"
+msgstr "https://www.artwhere.eu"
+
+#. URI of the plugin
+#, fuzzy
+msgid "https://www.taxoclean.com"
+msgstr "https://www.taxoclean.com"
+
+#: includes/translations.php:56
+#, fuzzy
+msgid "Ignore"
+msgstr "Görmezden gelmek"
+
+#: includes/translations.php:34
+#, fuzzy
+msgid "Ignore list"
+msgstr "Listeyi yoksay"
+
+#: includes/translations.php:36
+#, fuzzy
+msgid "Ignored terms"
+msgstr "Yok sayılan terimler"
+
+#: includes/translations.php:50
+#, fuzzy
+msgid ""
+"Ignored terms are terms that you don't want to see in the lookalikes and "
+"orphans list."
+msgstr ""
+"Yoksayılan terimler, benzerler ve kimsesizler listesinde görmek "
+"istemediğiniz terimlerdir."
+
+#: includes/translations.php:17
+#, fuzzy
+msgid "Invert selection"
+msgstr "Zıt seçim"
+
+#: includes/translations.php:33
+#, fuzzy
+msgid ""
+"Level of similarity between terms to consider them as lookalikes, increase "
+"to be more strict."
+msgstr ""
+"Benzer olarak kabul etmek için terimler arasındaki benzerlik düzeyi, daha "
+"katı olmak için artırın."
+
+#: includes/translations.php:43
+#, fuzzy
+msgid "License"
+msgstr "Lisans"
+
+#: includes/translations.php:12
+#, fuzzy
+msgid "Lookalike groups"
+msgstr "benzer gruplar"
+
+#: includes/translations.php:32
+#, fuzzy
+msgid "Lookalike level"
+msgstr "benzer seviye"
+
+#: includes/translations.php:48
+#, fuzzy
+msgid ""
+"Lookalike terms are terms that are very similar to each other.<br>They are "
+"often the result of a typo, or a mistake. You can merge them to keep only "
+"one term."
+msgstr ""
+"Benzer terimler, birbirine çok benzeyen terimlerdir.<br>Bunlar genellikle "
+"bir yazım hatası veya hatanın sonucudur. Yalnızca bir terimi tutmak için "
+"bunları birleştirebilirsiniz."
+
+#: includes/translations.php:6
+#, fuzzy
+msgid "Lookalikes"
+msgstr "Benzerler"
+
+#: includes/translations.php:15
+#, fuzzy
+msgid "Merge"
+msgstr "Birleştirmek"
+
+#: includes/translations.php:13
+#, fuzzy
+msgid "Merge those"
+msgstr "Bunları birleştir"
+
+#: includes/translations.php:37
+#, fuzzy
+msgid "No ignored terms"
+msgstr "Göz ardı edilen terim yok"
+
+#: includes/translations.php:31
+#, fuzzy
+msgid "No matching tag"
+msgstr "Eşleşen etiket yok"
+
+#: includes/translations.php:47
+#, fuzzy
+msgid "Number of cleaned terms"
+msgstr "Temizlenen terimlerin sayısı"
+
+#: includes/translations.php:23
+#, fuzzy
+msgid "Number of terms to process in one batch."
+msgstr "Bir toplu işte işlenecek terim sayısı."
+
+#: includes/translations.php:39
+#, fuzzy
+msgid "orphan terms"
+msgstr "yetim terimleri"
+
+#: includes/translations.php:49
+#, fuzzy
+msgid ""
+"Orphan terms are terms that are not used in any post. You can delete them or "
+"reassign posts to another term."
+msgstr ""
+"Yetim terimler, herhangi bir gönderide kullanılmayan terimlerdir. Bunları "
+"silebilir veya gönderileri başka bir terime yeniden atayabilirsiniz."
+
+#: includes/translations.php:20
+#, fuzzy
+msgid "Orphan treshold"
+msgstr "Yetim eşiği"
+
+#: includes/translations.php:7
+#, fuzzy
+msgid "Orphans"
+msgstr "Kimsesiz çocuklar"
+
+#: includes/translations.php:40
+#, fuzzy
+msgid "posts will be updated"
+msgstr "yazılar güncellenecektir"
+
+#: includes/translations.php:59
+#, fuzzy
+msgid ""
+"Premium version of Taxoclean will allow you to:\n"
+"\t\t\t\t\t<ul>\n"
+"\t\t\t\t\t\t<li>· Select which terms you want to merge in lookalike mode."
+"</li>\n"
+"\t\t\t\t\t\t<li>· Bulk actions in orphans mode to delete many tags in one "
+"action.</li>\n"
+"\t\t\t\t\t\t<li>· Ignore some terms.</li>\t\t\t\t\t\t\n"
+"\t\t\t\t\t</ul>"
+msgstr ""
+"Taxoclean'ın premium sürümü şunları yapmanızı sağlar:\n"
+"<ul>\n"
+"<li>· Benzer modda hangi terimleri birleştirmek istediğinizi seçin.</li>\n"
+"<li>· Tek bir işlemde birçok etiketi silmek için yetim modunda toplu "
+"işlemler.</li>\n"
+"<li>· Bazı terimleri dikkate almayın.</li>\n"
+"</ul>"
+
+#: includes/translations.php:25
+#, fuzzy
+msgid "Replace"
+msgstr "Yer değiştirmek"
+
+#: includes/translations.php:19
+#, fuzzy
+msgid "Search another term"
+msgstr "Başka bir terim ara"
+
+#: includes/translations.php:65
+#, fuzzy
+msgid "Select all 0 posts terms"
+msgstr "0 gönderi terimlerinin tümünü seç"
+
+#: includes/translations.php:8
+#, fuzzy
+msgid "Settings"
+msgstr "Ayarlar"
+
+#. Name of the plugin
+#, fuzzy
+msgid "Taxoclean"
+msgstr "Taksonomi"
+
+#: includes/translations.php:42
+#, fuzzy
+msgid ""
+"Taxoclean is a plugin to help you clean your taxonomies.<br>It will help you "
+"find lookalike terms, and merge them.<br>It will also help you find orphan "
+"terms, and delete them."
+msgstr ""
+"Taxoclean, taksonomilerinizi temizlemenize yardımcı olacak bir eklentidir."
+"<br>Benzer terimleri bulmanıza ve bunları birleştirmenize yardımcı olur.<br>"
+"Ayrıca sahipsiz terimleri bulmanıza ve silmenize yardımcı olur."
+
+#: includes/translations.php:57
+#, fuzzy
+msgid ""
+"Taxoclean is powered by <a href='https://www.artwhere.eu' target='_blank'>"
+"Artwhere</a>"
+msgstr ""
+"Taxoclean, <a href='https://www.artwhere.eu' target='_blank'>Artwhere</a> "
+"tarafından desteklenmektedir"
+
+#: includes/translations.php:24
+#, fuzzy
+msgid "Taxonomy to analyze"
+msgstr "Analiz edilecek taksonomi"
+
+#: includes/translations.php:11
+#, fuzzy
+msgid "terms"
+msgstr "şartlar"
+
+#: includes/translations.php:14
+#, fuzzy
+msgid "terms into"
+msgstr "terimler içine"
+
+#: includes/translations.php:21
+#, fuzzy
+msgid "Terms with less than this number of posts will be considered orphans."
+msgstr ""
+"Bu sayıdan daha az gönderiye sahip terimler yetim olarak kabul edilecektir."
+
+#: includes/translations.php:9
+#, fuzzy
+msgid "Total terms"
+msgstr "Toplam terimler"
+
+#: includes/translations.php:35
+#, fuzzy
+msgid "Unignore"
+msgstr "Yoksay"
+
+#: includes/translations.php:38
+#, fuzzy
+msgid "Unselect all"
+msgstr "Tümünün seçimini kaldır"
+
+#: includes/translations.php:54
+#, fuzzy
+msgid "Updating"
+msgstr "güncelleniyor"
+
+#: includes/translations.php:58
+#, fuzzy
+msgid "Why premium ?"
+msgstr "Neden prim?"

@@ -1,0 +1,178 @@
+
+.taxoclean .blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.taxoclean INPUT[type='text'] {
+    width:200px;
+}
+.taxoclean .target {
+    display:none;
+}
+
+.taxoclean button {
+    background:red;
+    color:white;
+    border:1px solid black;
+    padding:5px 15px;
+}
+.taxoclean TH {
+    text-align:left;
+}
+.taxoclean .page {
+    display:inline-block;
+    background:white;
+    border-radius:5px;
+    border:1px solid #CCC;
+    color:black;
+    padding:3px 7px;
+    margin:2px;
+    min-width:30px;
+    text-decoration:none;
+    text-align:center;
+}
+.taxoclean .page.active{
+    background:#295692;
+    color:white;
+}
+.taxoclean {
+    margin:auto;
+}
+.taxoclean .red {
+    text-decoration: line-through;
+    color:red;
+}
+.taxoclean .green {
+    color:darkgreen;
+}
+.taxoclean .box {
+    background:white;
+    border-radius:5px;
+    padding:5px 10px;
+    margin-bottom:10px;
+    border: 1px solid #AAA;
+}
+.taxoclean .box:hover {
+    border-color:#333;
+}
+.taxoclean button {
+    cursor:pointer;
+}
+.taxoclean .replace_wrapper{
+    display:none;
+}
+.taxoclean .tabs{
+    border-bottom:1px solid black;
+}
+.taxoclean .tab {
+    display:inline-block;
+    padding:5px 10px;
+    border:1px solid black;
+    margin-right:15px;
+    border-bottom:0;
+}
+.taxoclean .tab.active {
+    background:black;
+}
+.taxoclean .ignore {
+    cursor:pointer;
+    display:inline-block
+}
+.taxoclean .selector {
+    width:20px;
+}
+.taxoclean table {
+    width:100%;
+    border-collapse:collapse;
+}
+.taxoclean .target {
+    padding-top:5px;
+}
+.taxoclean table .hover:hover {
+    background:#EEE;
+    border-radius:3px;
+}
+.taxoclean TH {
+    vertical-align: top;
+    padding-top: 0;
+}
+.taxoclean .box h1 {
+    margin-top:10px;
+}
+.taxoclean table TD {
+    padding:3px;
+}
+.taxoclean IMG {
+    max-width:100%;
+}
+.taxoclean .left {
+    width:70%;
+    float:left;
+}
+.taxoclean .right {
+    width:30%;
+    float:right;
+    position:relative;
+}
+.taxoclean #robot {
+    position:fixed;
+    right:0;
+    top:40%;
+    z-index:1;
+    width:25%;
+    transform:translateY(-50%);
+}
+#wpcontent {
+    background: linear-gradient(90deg, #F0F0F1 0%, rgba(28,80,142,1) 100%);
+    background-attachment: fixed;
+}
+#wpcontent .taxoclean H1 {
+    color:black;
+}
+.taxoclean .row-preview {
+    padding-right:30px;
+    position:relative;
+}
+.taxoclean .remove {
+    position:absolute;
+    width:30px;
+    top:15px;
+    right:0;
+    cursor:pointer;
+}
+
+.taxoclean .button .dashicons {
+    line-height: 28px;
+}
+
+.taxoclean {
+    min-height: 90vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .taxoclean .left {
+        width:100%;
+        float:left;
+    }
+    .taxoclean #robot {
+        display:none;
+    }
+    .taxoclean .button .dashicons {
+        line-height: 35px;
+    }
+    .taxoclean .tr_orphans,
+    .taxoclean TD[align='right'] {
+        display:block;
+    }
+    .taxoclean {
+        padding-right:15px;
+    }
+}
+
+

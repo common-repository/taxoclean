@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+	<div class="box">
+		<span id="count">{{ data|length }}</span> {{ _t.posts_will_be_updated }}
+	</div>
+
+
+	{% if not fast_mode %}
+		<div class="box" style="color:red">{{ _t.fast_mode_enable }}</div>
+	{% endif %}
+
+	<br>
+	<form method="POST" id="preview_form" {% if fast_mode %}style="display:none"{% endif %}>
+
+		<div>
+			<button class="button button-primary">{{ _t.apply }}</button>
+		</div>
+		<br>
+		<input type="hidden" name="tc_action" value="submit">
+		{% for line in data %}
+			<div class='box row-preview'>
+				<div><b>[ID: {{ line.post_id }}] - <a target="_blank" href="{{ line.post_url }}">{{ line.post_title }}</a></b></div>
+				<div>
+					<span class='red'>{{ line.reassign.from }}</span>
+					>
+					<span class='green'>{{ line.reassign.to }}</span>
+				</div>
+				<input type="hidden" name="tids[{{ line.post_id }}]" value="{{ line.tag_ids }}">
+				<div class="remove"><i class="dashicons dashicons-dismiss"></i></div>
+			</div>
+		{% endfor %}
+		<input type="hidden" name="update_tag_id" value="{{ update_tag.id }}">
+		<input type="hidden" name="update_tag_to" value="{{ update_tag.to }}">
+		<br>
+		<button class="button button-primary">{{ _t.apply }}</button>
+	</form>
+
+	{% if fast_mode %}
+		<div class="blink">{{ _t.updating }}...</div>
+	{% endif %}
+
+	<script>
+		jQuery(".taxoclean .remove").click(function(){
+			jQuery(this).parent().slideUp(function() {
+				jQuery(this).remove();
+			});
+			jQuery("#count").html(parseInt(jQuery("#count").html()) - 1);
+		});
+		{% if fast_mode %}
+			jQuery("#preview_form").submit();
+		{% endif %}
+	</script>
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+	<div class="row" style="overflow:hidden;">
+		<div class="box">
+			<h1>{{ _t.total_terms }} : <b>{{ all_tags|length }}</b></h1>
+			<h2>{{ _t.analyze_of }} <b>{{ max }}</b> {{ _t.terms }}</h2>
+			<h2><b>{{ likes|length }}</b> {{ _t.lookalike_groups }}</h2>
+		</div>
+	</div>
+
+	{% set pages = ((all_tags|length) / max)|round(0, "floor") %}
+
+	{% import "includes/macros.html.twig" as macro %}
+
+	<div class="pager">
+		{% include "includes/pagination.html.twig" with {
+			"route": "taxoclean_l",
+			"pages": pages,
+			"page": page
+		} %}
+	</div>
+	<br>
+	<div>
+		{% for k, ts in likes %}
+			<form autocomplete='off' method='post' class='tc_form box plugin-card'>
+				<input type="hidden" name="tc_action" value="preview">
+				<table>
+					{{ macro.taxo_l_block(k, counters, license) }}
+					{% for t in ts %}
+						{{ macro.taxo_l_block(t, counters, license) }}
+					{% endfor %}
+				</table>
+				<div class='target'>
+					{{ _t.merge_left }} <b><span class='count'>{{ (ts|length + 1) }}</span></b> {{ _t.merge_right }} <input type='text' name='target' class='chosen_tag'>
+					<button type='submit' class="button button-primary">{{ _t.merge }}</button>
+				</div>
+			</form>
+		{% endfor %}
+	</div>
+	<div style="clear:both"></div>
+	<br>
+	<div class="pager">
+		{% include "includes/pagination.html.twig" with {
+			"route": "taxoclean_l",
+			"pages": pages,
+			"page": page
+		} %}
+	</div>
+	<script>
+
+		jQuery(".taxoclean").on("click", ":radio", function() {
+			$form = jQuery(this).parents("form");
+			$form.find(".chosen_tag").val(jQuery(this).val());
+			if ($form.find(":checkbox:checked").length > 0) {
+				$form.find(".target").slideDown();
+			} else {
+				$form.find(".target").slideUp();
+			}
+		});
+
+		jQuery(".taxoclean").on("click",".ignore", function() {
+			if (confirm(_t.are_you_sure_ignore)) {
+				jQuery.ajax({
+					"dataType":"json",
+					"url": ajaxurl,
+					"type": "POST",
+					"data": {
+						_ajax_nonce: "{{ nonce }}",
+						action: "taxoclean_ignore",
+						term: jQuery(this).data("term")
+					},
+					"success": function() {
+						document.location.reload();
+					}
+				});
+			}
+		});
+
+		jQuery(".taxoclean").on("click", ":checkbox", function() {
+			let $form = jQuery(this).parents("form");
+			$form.find(".count").text($form.find(":checkbox:checked").length);
+			if ($form.find(":checkbox:checked").length > 0) {
+				$form.find(".target").slideDown();
+			} else {
+				$form.find(".target").slideUp();
+			}
+		});
+
+		jQuery('.tc_form').each(function() {
+			let $max = false;
+			let max = 0;
+			jQuery(this).find(".qty").each(function() {
+				if (parseInt(jQuery(this).text()) > max) {
+					$max = jQuery(this);
+					max = parseInt(jQuery(this).text());
+				}
+			});
+			if ($max){
+				$max.parent().parent().find(":radio").click();
+			}
+		});
+	</script>
+
+{% endblock %}
